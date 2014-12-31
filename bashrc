@@ -68,3 +68,8 @@ if [ -d ~/.rbenv ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
 fi
+
+if [ $(needs_update) -gt 0 ]; then
+    echo "Updating dotfiles..."
+    update_dotfiles
+fi
