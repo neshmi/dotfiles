@@ -18,10 +18,12 @@ do
 done
 
 # Source private files that may contain credentials or sensitive info
-for private in ~/\.private.d/*
-do
-    source ${private}
-done
+if [ -d .private.d ]; then
+    for private in ~/\.private.d/*
+    do
+        source ${private}
+    done
+fi
 
 ### Aliases
 alias c="script/console"
