@@ -50,7 +50,7 @@ export ANSIBLE_HOSTS=~/etc/ansible_hosts
 
 # Set Prompt. Uses git-branch-aware if available
 if type find_git_branch|grep -q 'function$' 2>/dev/null; then
-    export PS1="[\u@\[$txtred\]\h\[$txtrst\]] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+    export PS1="[\u@\[$host_color\]\h\[$txtrst\]] \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 else
     export PS1="[\u@\h] \w \$ "
 fi
