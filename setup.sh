@@ -80,7 +80,9 @@ parse_params() {
 =======
       # Clean up the link to the directory
       if [ -d ${file} ]; then
-        rm ~/.${file}
+        if [ -d ~/.${file} ]; then
+          rm ~/.${file}
+        fi
       fi
       # Link the new one in place
       ln -sf $(pwd)/${file} ~/.${file}
