@@ -43,7 +43,7 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = simple
+	default = matching
 [filter "media"]
 	required = true
 	clean = git media clean %f
