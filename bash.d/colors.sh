@@ -39,3 +39,13 @@ bakcyn="$(tput setab 6)"  # Cyan
 bakwht="$(tput setab 7)"  # White
 
 txtrst="$(tput sgr 0)"    # Text Reset
+
+function show_colors() {
+  x=`tput op`
+  y=`printf %$((${COLUMNS}-6))s`
+  for i in {0..256}
+  do
+    o=00$i
+    echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
+  done
+}
