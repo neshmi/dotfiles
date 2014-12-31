@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function update_dotfiles(){
-  (cd ~/.dotfiles && git reset --hard && git up > /dev/null 2>&1)
+  (cd ~/.dotfiles && git reset --hard >/dev/null && git up > /dev/null 2>&1)
 }
 
 function needs_update(){
