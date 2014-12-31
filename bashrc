@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-
 # OS X has a ridiculously low ulimit
 ulimit -n 10240
 
@@ -70,5 +68,3 @@ if [ -d ~/.rbenv ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
 fi
-
-homeshick --quiet refresh
