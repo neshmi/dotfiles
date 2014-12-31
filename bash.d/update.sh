@@ -5,5 +5,5 @@ function update_dotfiles(){
 }
 
 function needs_update(){
-  cd ~/.dotfiles && git log -n1|awk '{print $2}'|grep -c 'week'
+  (cd ~/.dotfiles && git log -n1|awk -F] '{print $1}'|grep -c 'week')
 }
