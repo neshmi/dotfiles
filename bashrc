@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# OS X has a ridiculously low ulimit
-ulimit -n 10240
+# Get our colors on
+export TERM=xterm-256color
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
@@ -61,6 +61,8 @@ if [[ $OSTYPE == darwin* ]]; then
     export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
     export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
     export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
+    # OS X has a ridiculously low ulimit
+    ulimit -n 10240
 fi
 
 # Load rbenv if available
