@@ -13,7 +13,6 @@ set incsearch           " Use incremental searches (cool)
 set ruler               " Show position of cursor in status line
 set showmatch           " Show matching parens/braces when writing code
 set wh=55               " Minimum window height
-set textwidth=78        " Maximum line width when writing comments
 set t_Co=256            " 256 colors in terminal
 highlight ColorColumn  ctermbg=232
 let &colorcolumn="80,".join(range(81,999),",")
