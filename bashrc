@@ -72,6 +72,5 @@ if [ -d ~/.rbenv ]; then
 fi
 
 if [ $(needs_update) -gt 0 ]; then
-    echo "Updating dotfiles..."
     update_dotfiles
 fi
