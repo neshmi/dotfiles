@@ -46,6 +46,9 @@ export GIT_HOSTING='git@github.com'
 # Set my editor and git editor
 export EDITOR="/usr/bin/vim"
 export GIT_EDITOR='/usr/bin/vim'
+
+# Enable vi mode
+set -o vi
 export ANSIBLE_HOSTS=~/etc/ansible_hosts
 
 # Set Prompt. Uses git-branch-aware if available
