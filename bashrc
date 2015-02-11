@@ -74,6 +74,3 @@ if [ -d ~/.rbenv ]; then
     eval "$(rbenv init -)"
 fi
 
-if [ $(needs_update) -gt 0 ]; then
-    update_dotfiles
-fi
