@@ -1,5 +1,5 @@
 # Calculate a short checksum of the real hostname to determine a unique color
-if [ $(hostname) == "mordor" ]; then
+if [ $(hostname) == "angband" ]; then
   host_color="$(tput setaf 1)"
 else
   if [[ $TERM =~ "256color" ]]; then
