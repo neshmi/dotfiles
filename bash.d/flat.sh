@@ -20,11 +20,11 @@ COLOR_15="#2AA198"           #
 COLOR_16="#ecf0f1"           #
 
 BACKGROUND_COLOR="#1F2D3A"   # Background Color
-FOREGROUND_COLOR="#1abc9c"   # Text
-CURSOR_COLOR="$FOREGROUND_COLOR" # Cursor
+FOREGROUND_COLOR="#27ae60"   # Text
+CURSOR_COLOR="#2ecc71" # Cursor
 # =============================================================== #
 
 # |
 # | Apply Colors
 # | ===========================================
-source <(wget  -O - http://git.io/vY8Qq)
+source ~/.dotfiles/apply_colors.sh
