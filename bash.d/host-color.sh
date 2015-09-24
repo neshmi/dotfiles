@@ -1,5 +1,5 @@
 # Calculate a short checksum of the real hostname to determine a unique color
-if [ "$(hostname)" == "eriador" ] && [ "$(hostname)" == "angband" ]; then
+if [ "$(hostname)" == "eriador" ] || [ "$(hostname)" == "angband" ]; then
   export host_color="$(tput setaf 1)"
 else
   if [[ "$TERM" =~ 256color ]]; then
