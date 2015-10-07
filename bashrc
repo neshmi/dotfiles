@@ -26,6 +26,9 @@ fi
 ### Aliases
 alias c="script/console"
 alias e="vi ."
+if [ -e $(which less) ]; then
+  alias more="less"
+fi
 
 ### Variables
 # Change this to your console based IRC client of choice.

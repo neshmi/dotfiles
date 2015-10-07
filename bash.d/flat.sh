@@ -28,5 +28,5 @@ CURSOR_COLOR="#2ecc71" # Cursor
 # |
 # | Apply Colors
 # | ===========================================
-source ~/.dotfiles/apply_colors.sh
+# source ~/.dotfiles/apply_colors.sh
 fi
