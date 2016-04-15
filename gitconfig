@@ -1,6 +1,7 @@
 [user]
 	name = Nathan Anderson
 	email = andnat@gmail.com
+	signingkey = andnat@gmail.com
 [core]
 	excludesfile = /Users/nathan/.gitignore
 [format]
@@ -30,7 +31,7 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = matching
+	default = current
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -45,3 +46,5 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[commit]
+	gpgsign = true
