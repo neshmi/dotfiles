@@ -4,3 +4,7 @@ opendir(){
     find "$1" -type d -execdir /bin/chmod go+x {} \;
   fi
 }
+
+fixpow(){
+    sudo pfctl -f /etc/pf.conf; sudo pfctl -e
+}
