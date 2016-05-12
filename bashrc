@@ -82,3 +82,4 @@ fi
 if [ -d ~/.orc ]; then
     eval "$(~/.orc/bin/orc init -)"
 fi
+HOMEBREW_NO_ANALYTICS=1
