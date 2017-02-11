@@ -16,3 +16,21 @@ autoload colors; colors
 unset LSCOLORS
 export CLICOLOR=1
 export LS_COLORS=exfxcxdxbxegedabagacad
+
+# Calculate a short checksum of the real hostname to determine a unique color
+# local hostname will get red by default
+function hostname_with_color(){
+  local host=$(hostname)
+  local hostsum=$(echo $host | cksum | cut -c3-5)
+  local color="red"
+  if [[ "$host" != "eriador" ]] && [[ "$host" != "angband" ]]; then
+    if [[ "$TERM" =~ 256color ]]; then
+      color=$(( $hostsum % 256 ))
+    else
+      color=$(( 31 + $(echo $hostsum) % 6))
+    fi
+  fi
+  echo "%B%F{$color}$host%b%f"
+}
+
+export hostname=$(hostname_with_color)

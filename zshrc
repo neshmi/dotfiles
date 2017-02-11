@@ -46,22 +46,11 @@ zstyle ':vcs_info:*:*' check-for-changes true
 zstyle ':vcs_info:*:*' unstagedstr '%F{red} ●%f'
 zstyle ':vcs_info:*:*' stagedstr '%F{green} ✚%f'
 
-# Prompt
-setopt prompt_subst
-export PS1='[%F{green}%n%f%F{white}@%f%F{yellow}%m%f] %F{blue}%1~%f %# '
-export RPS1='${vcs_info_msg_0_}'
-
-
 if zplug check zsh-users/zsh-autosuggestions; then
   ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
   bindkey '^ ' autosuggest-accept
 fi
-
-## Print a horizontal rule
-rule () {
-  printf "%$(tput cols)s\n"|tr " " "─"
-}
 
 # Source common scripts
 for source_file in ~/.sh.d/* ~/.zsh.d/*
@@ -76,3 +65,8 @@ if [ -d .private.d ]; then
         source ${private}
     done
 fi
+
+# Prompt
+setopt prompt_subst
+export PS1='[%F{green}%n%f%F{white}@%f$hostname%f] %F{blue}%1~%f %# '
+export RPS1='${vcs_info_msg_0_}'
