@@ -1,5 +1,3 @@
-#!/bin/bash
-
 function update_dotfiles(){
   (cd ~/.dotfiles && git reset --hard >/dev/null && git up > /dev/null 2>&1)
 }

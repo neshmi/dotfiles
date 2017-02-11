@@ -75,26 +75,7 @@ parse_params() {
       die "Unknown option: $1"
       ;;
     *)
-<<<<<<< HEAD
       break
-=======
-      # Clean up the link to the directory
-      if [ -d ${file} ]; then
-        if [ -d ~/.${file} ]; then
-          rm ~/.${file}
-        fi
-      fi
-      # Link the new one in place
-      ln -sf $(pwd)/${file} ~/.${file}
-      # Source the new stuff
-      if [ -f ~/.bash_profile ]; then
-        source ~/.bash_profile;
-      elif [ -f ~/.profile ]; then
-        source ~/.profile
-      else
-        cp bash_profile ~/.bash_profile && source ~/.bashrc
-      fi
->>>>>>> 224fa2f (Fix syntax error and dir handling)
       ;;
     esac
     shift

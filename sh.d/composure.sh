@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # composure - by erichs
 # light-hearted functions for intuitive shell programming
 

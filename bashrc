@@ -1,71 +1,16 @@
 #!/usr/bin/env bash
 
-# Get our colors on
-export TERM=xterm-256color
-
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
-# Add local bin and ~/bin to the path
-export PATH=/usr/local/bin:$PATH:~/bin
-
-### Aliases
-alias c="script/console"
-alias e="vi ."
-if [ -e $(which less) ]; then
-  alias more="less"
-fi
-
-### Variables
-# Change this to your console based IRC client of choice.
-export IRC_CLIENT='weechat'
-
-# Ruby default options
-export RUBYOPT="-Ilib -Itest -rubygems"
-
-# History Control
-export HISTTIMEFORMAT="%F %T "
-export HISTCONTROL="ignoreboth"
-export HISTFILESIZE=1000000
-export HISTSIZE=100000
-
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@github.com'
-
-# Set my editor and git editor
-export EDITOR="/usr/bin/vim"
-export GIT_EDITOR='/usr/bin/vim'
-
-# Enable vi mode
-set -o vi
-export ANSIBLE_HOSTS=~/etc/ansible_hosts
-
-# Set up osx-specific build options
-if [[ $OSTYPE == darwin* ]]; then
-    export PATH=$PATH:/usr/local/sbin
-    export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
-    export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
-    export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
-    # OS X has a ridiculously low ulimit
-    ulimit -n 10240
-fi
-
-# Load rbenv if available
-if [ -d ~/.rbenv ]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-fi
-
-# Load orc if available
-# https://github.com/anoldguy/orc ;)
-if [ -d ~/.orc ]; then
-    eval "$(~/.orc/bin/orc init -)"
-fi
-
-HOMEBREW_NO_ANALYTICS=1
-
 # Source bash scripts in .bash.d
 for source_file in ~/.bash.d/*
+do
+    source ${source_file}
+done
+
+# Source common scripts in .sh.d
+for source_file in ~/.sh.d/*
 do
     source ${source_file}
 done

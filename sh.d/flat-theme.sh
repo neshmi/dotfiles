@@ -1,5 +1,4 @@
-#!/bin/bash
-if [[ $OSTYPE != darwin* ]]; then
+if [[ $IS_MAC -ne 1 ]]; then
 
 # ====================CONFIG THIS =============================== #
 COLOR_01="#2c3e50"           # HOST
@@ -28,5 +27,5 @@ CURSOR_COLOR="#2ecc71" # Cursor
 # |
 # | Apply Colors
 # | ===========================================
-# source ~/.dotfiles/apply_colors.sh
+ source ~/.dotfiles/apply_colors.sh
 fi
