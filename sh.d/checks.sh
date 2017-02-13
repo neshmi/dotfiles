@@ -1,3 +1,9 @@
+export IS_LINUX=0
+export IS_MAC=0
+export HAS_BREW=0
+export HAS_APT=0
+export HAS_YUM=0
+
 # checks (stolen from zshuery)
 if [[ $(uname) = 'Linux' ]]; then
     IS_LINUX=1
