@@ -1,29 +1,18 @@
-# Dotfiles
-
-Personal dotfiles for anoldguy. Requires `stow` to manage installation of dotfiles, and has lots of [`fish`](https://fishshell.com/)-specific stuff. The prompt is all [`starship`](https://starship.rs) tho!
+# My dotfiles
+These are designed around my workflows and habits.  But, they might work for you, too.
 
 ## Installation
+1. Clone the repo into `~/.dotfiles`
+2. `cd ~/.dotfiles`
+3. Run `./setup.sh`
 
-1. Fork repo
-2. Clone repo
-3. `cd path/to/repo`
-4. Run `./setup.sh`
+This will iterate through the directories and files in the `.dotfiles` directory and symlink
+them into place in your home directory.
 
-## Removal
+It supports both `zsh` and `bash`, my current shell is `zsh`, but I was a `bash` user for many
+years.  Place any `zsh` scripts into `~/.zsh.d` and any `bash` scripts into `~/.bash.d`. Place
+any scripts that can be used in both into `~/.sh.d`.
 
-1. `cd path/to/repo`
-2. Run `./setup.sh -c`
-
-## Other Options
-
-```bash
-./setup.sh -h
-```
-
-## Terminal Themes
-
-I've included a couple of my fav terminal themes. Flat has been my default for years, but both the Elementary and Dimmed Monokai look promising.
-
-![Flat Terminal Preview](flat-terminal-preview.png)
-![Elementary Terminal Preview](elementary-terminal-preview.png)
-![Dimmed Monokai Terminal Preview](dimmed-monokai-terminal-preview.png)
+## Private Credentials
+No environment would be complete without sensitive info, so stick those into `~/.private.d` and
+they'll get sourced, too!
