@@ -4,13 +4,10 @@ if [ -d ~/.rbenv ]; then
     eval "$(rbenv init -)"
 fi
 
-# Load orc if available
-# https://github.com/anoldguy/orc ;)
-if [ -d ~/.orc ]; then
-    eval "$(~/.orc/bin/orc init -)"
-fi
-
 # Source oh-my-git if it exists
 if [ -f ~/.oh-my-git ]; then
   source ~/.oh-my-git/prompt.sh
 fi
+
+# Source work
+which work && eval "$(work init -)"
