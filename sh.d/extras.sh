@@ -10,4 +10,4 @@ if [ -f ~/.oh-my-git ]; then
 fi
 
 # Source work
-which work && eval "$(work init -)"
+which work >/dev/null 2>&1 && eval "$(work init -)"

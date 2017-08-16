@@ -1,0 +1,3 @@
+if [ -x ~/.orc/bin/orc ]; then
+  eval "$(~/.orc/bin/orc init -)"
+fi
