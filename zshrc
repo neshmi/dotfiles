@@ -1,6 +1,10 @@
 # Start tmux or attach to existing tmux session
 HOSTNAME=$(hostname -s)
 
+if [ ! -d ~/.zplug ]; then
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+fi
+
 # Zplug
 source ~/.zplug/init.zsh
 
@@ -9,6 +13,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2, at:v0.3.3
 zplug "hchbaw/auto-fu.zsh", defer:2
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

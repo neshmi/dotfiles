@@ -41,9 +41,7 @@ export GREP_COLOR='3;33'
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
 
-export EDITOR='vim'
-# CTAGS Sorting in VIM/Emacs is better behaved with this in place
-export LC_COLLATE=C
+export EDITOR='code -w'
 
 export HOMEBREW_NO_ANALYTICS=1
 
