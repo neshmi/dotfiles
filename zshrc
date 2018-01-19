@@ -13,6 +13,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2, at:v0.3.3
 zplug "hchbaw/auto-fu.zsh", defer:2
+zplug "micha/resty", use:"resty"
 
 
 # Install plugins if there are plugins that have not been installed
