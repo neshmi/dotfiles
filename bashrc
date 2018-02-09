@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Stuff for WSL
+if uname -r | grep 'Microsoft' >/dev/null 2>&1; then
+    sudo mount --bind /mnt/c /c
+    export SHELL=/usr/bin/zsh
+    exec /usr/bin/zsh
+fi
+
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
@@ -29,3 +36,4 @@ if type find_git_branch|grep -q 'function$' 2>/dev/null; then
 else
     export PS1="[\u@\h] \w \$ "
 fi
+
