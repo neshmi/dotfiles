@@ -1,7 +1,7 @@
 [user]
 	name = Nathan Anderson
 	email = andnat@gmail.com
-	signingkey = andnat@gmail.com
+	signingkey = 0xAB2E8BA30A3CD935
 [core]
 	excludesfile = /Users/nathan/.gitignore
 [format]
@@ -28,8 +28,6 @@
   undo = reset --soft HEAD^
 [rerere]
   enabled = 1
-[credential]
-	helper = osxkeychain
 [push]
 	default = current
 [filter "media"]

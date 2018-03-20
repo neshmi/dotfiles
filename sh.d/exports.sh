@@ -22,6 +22,7 @@ if [[ $OSTYPE == darwin* ]]; then
     export C_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
     export CPLUS_INCLUDE_PATH="$(xcrun --show-sdk-path)/usr/include"
     export LIBRARY_PATH="$(xcrun --show-sdk-path)/usr/lib:$(xcrun --show-sdk-path)/usr/lib/system:$LIBRARY_PATH"
+    export HOMEBREW_NO_ANALYTICS=1
     # OS X has a ridiculously low ulimit
     ulimit -n 10240
 fi
@@ -34,9 +35,5 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 # This resolves issues install the mysql, postgres, and other gems with native non universal binary extensions
 export ARCHFLAGS='-arch x86_64'
 
-export EDITOR='code -w'
-
-export HOMEBREW_NO_ANALYTICS=1
-
 # Add local bin and ~/bin to the path
-export PATH=/usr/local/bin:$PATH:~/bin
+export PATH=$PATH:/usr/local/bin:~/.local/bin:/usr/local/go/bin:~/bin

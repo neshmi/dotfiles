@@ -13,7 +13,7 @@ do
     # It's just a file, link it
     case $file in
       # Skip setup files
-      setup.sh|bash_profile|flat-colors.json|flat.terminal|osx.sh|sublime.prefs|apply_colors.sh)
+      setup.sh|flat-colors.json|flat.terminal|osx.sh|sublime.prefs|apply_colors.sh)
         echo "      skipped"
         ;;
       *)
