@@ -1,16 +1,9 @@
 HOSTNAME=$(hostname -s)
 
-<<<<<<< HEAD
-#if [ ! -d ~/.zplug ]; then
-#  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
-#fi
-=======
-unsetopt BG_NICE
 
 if [ ! -d ~/.zplug ]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 fi
->>>>>>> 080c387 (Fixes for linux and/on windows)
 
 # Zplug
 #source ~/.zplug/init.zsh
@@ -34,6 +27,8 @@ zplug "micha/resty", use:"resty"
 # Then, source plugins and add commands to $PATH
 #zplug load
 
+=======
+>>>>>>> 7fd86b3 (Ugh, merge detrius)
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
