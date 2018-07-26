@@ -14,10 +14,10 @@ sudo -v
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "angband"
-sudo scutil --set HostName "angband"
-sudo scutil --set LocalHostName "angband"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "angband"
+sudo scutil --set ComputerName "valinor"
+sudo scutil --set HostName "valinor"
+sudo scutil --set LocalHostName "valinor"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "valinor"
 
 
 # Disable the sound effects on boot

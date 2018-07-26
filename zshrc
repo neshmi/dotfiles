@@ -37,7 +37,6 @@ autoload -Uz compinit
 compinit
 bindkey -v
 
-
 # Set the language if it wasn't already set
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
@@ -72,3 +71,5 @@ fi
 setopt prompt_subst
 export PS1='[%F{green}%n%f%F{white}@%f$hostname%f] %F{blue}%1~%f %# '
 export RPS1='${vcs_info_msg_0_}'
+
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

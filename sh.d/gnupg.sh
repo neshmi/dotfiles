@@ -5,3 +5,4 @@ switch_key(){
 		gpg --card-status > /dev/null 2>&1
 	done
 }
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
