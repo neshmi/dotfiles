@@ -53,11 +53,9 @@ zstyle ':vcs_info:*:*' check-for-changes true
 zstyle ':vcs_info:*:*' unstagedstr '%F{red} ●%f'
 zstyle ':vcs_info:*:*' stagedstr '%F{green} ✚%f'
 
-# Source common scripts
-for source_file in ~/.sh.d/* ~/.zsh.d/*
-do
-  source ${source_file}
-done
+
+source ~/.sh.d.sh
+source ~/.zsh.d.zsh
 
 # Source private files that may contain credentials or sensitive info
 if [ -d .private.d ]; then
@@ -71,5 +69,3 @@ fi
 setopt prompt_subst
 export PS1='[%F{green}%n%f%F{white}@%f$hostname%f] %F{blue}%1~%f %# '
 export RPS1='${vcs_info_msg_0_}'
-
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

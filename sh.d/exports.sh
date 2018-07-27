@@ -37,3 +37,9 @@ export ARCHFLAGS='-arch x86_64'
 
 # Add local bin and ~/bin to the path
 export PATH=$PATH:/usr/local/bin:~/.local/bin:/usr/local/go/bin:~/bin
+
+# Ruby:
+export RUBYOPT="-Ilib -Itest"
+
+# Terraform
+export PATH="$HOME/.tfenv/bin:$PATH"

@@ -52,4 +52,3 @@ function strip_diff_leading_symbols {
 rule () {
   printf "%$(tput cols)s\n"|tr " " "─"
 }
-
