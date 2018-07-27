@@ -19,25 +19,15 @@ do
         echo "      skipped"
         ;;
       *)
-        if [ ! -d $file ]; then
-          # It's just a file, link it
-
-              # Clean up the link to the directory
-              #if [ -d ${file} ]; then
-              #  if [ -d ~/.${file} ]; then
-              #    rm ~/.${file}
-              #  fi
-              #fi
-              # Link the new one in place
-              ln -sf $(pwd)/${file} $TARGET/.${file}
-              echo "      linked"
-
-        else
-          # It's a directory, let's concatenate the contents
-          base=$(basename -s.d ${file})
-          cat ${file}/* > $TARGET/.${file}.$base
-          echo "      compiled"
+        # Clean up the link to the directory
+        if [ -d ${file} ]; then
+          if [ -d ~/.${file} ]; then
+            rm ~/.${file}
+          fi
         fi
+        # Link the new one in place
+        ln -sf $(pwd)/${file} $TARGET/.${file}
+        echo "      linked"
       ;;
     esac
 done

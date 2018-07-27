@@ -54,15 +54,12 @@ zstyle ':vcs_info:*:*' unstagedstr '%F{red} ●%f'
 zstyle ':vcs_info:*:*' stagedstr '%F{green} ✚%f'
 
 
-source ~/.sh.d.sh
-source ~/.zsh.d.zsh
+source <(cat ~/.sh.d/*)
+source <(cat ~/.zsh.d/*)
 
 # Source private files that may contain credentials or sensitive info
 if [ -d .private.d ]; then
-    for private in ~/\.private.d/*
-    do
-        source ${private}
-    done
+    source <(cat ~/.private.d/*)
 fi
 
 # Prompt
