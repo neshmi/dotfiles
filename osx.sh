@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-set -ueox pipefail
+set -ueo pipefail
+
+name="${1:-valinor}"
 
 # ~/.osx — https://mths.be/osx
 
@@ -14,10 +16,10 @@ sudo -v
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "valinor"
-sudo scutil --set HostName "valinor"
-sudo scutil --set LocalHostName "valinor"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "valinor"
+sudo scutil --set ComputerName "$name"
+sudo scutil --set HostName "$name"
+sudo scutil --set LocalHostName "$name"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$name"
 
 
 # Disable the sound effects on boot
