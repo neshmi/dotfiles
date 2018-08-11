@@ -1,12 +1,6 @@
 #!/bin/bash
 set -eo pipefail
 
-if [ ! -d ~/.zplug ]; then
-  #curl -sL zplug.sh/installer | zsh
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
-fi
-
-
 TARGET="$HOME"
 mkdir -p $TARGET
 cat /dev/null > ~/.includes.sh
@@ -15,7 +9,7 @@ do
   echo -n "Processing $file"
   case $file in
       # Skip setup files
-      setup.sh|flat-colors.json|flat.terminal|osx.sh|sublime.prefs|apply_colors.sh|fonts)
+      setup.sh|README.md|flat-colors.json|flat.terminal|osx.sh|sublime.prefs|apply_colors.sh|fonts|zsh_plugins.txt)
         echo "      skipped"
         ;;
       *)
@@ -31,3 +25,5 @@ do
       ;;
     esac
 done
+
+which antibody && antibody bundle < ./zsh_plugins.txt > ~/.zsh_plugins.sh

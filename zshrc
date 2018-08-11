@@ -66,3 +66,14 @@ fi
 setopt prompt_subst
 export PS1='[%F{green}%n%f%F{white}@%f$hostname%f] %F{blue}%1~%f %# '
 export RPS1='${vcs_info_msg_0_}'
+
+# Source zsh plugins last
+if [ ! -e ~/.zsh_plugins.sh ]; then
+    antibody bundle < ~/.dotfiles/zsh_plugins.txt > ~/.zsh_plugins.sh
+fi
+
+source ~/.zsh_plugins.sh
+
+ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+bindkey '^ ' autosuggest-accept
