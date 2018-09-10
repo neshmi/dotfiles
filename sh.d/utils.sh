@@ -2,16 +2,15 @@ fixpow(){
     sudo pfctl -f /etc/pf.conf; sudo pfctl -e
 }
 
-correct(){
+# Remove the first character of $@ and return the rest
+lchop(){
     realized_args=$(echo "$@")
-    corrected_args="${realized_args:1}"
-    echo $corrected_args
+    chopped_args="${realized_args:1}"
+    echo $chopped_args
 }
 
-docke(){
-    docker $(correct "$@")
-}
-
-gi(){
-    git $(correct "$@")
-}
+# Turn 'gi tadd' into 'git add' and so forth
+for command in docker git cat ping
+do
+    eval "${command:0:-1}(){ ${command} \$(lchop "\$@") }"
+done

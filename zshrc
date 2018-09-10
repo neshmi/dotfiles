@@ -54,8 +54,8 @@ zstyle ':vcs_info:*:*' unstagedstr '%F{red} ●%f'
 zstyle ':vcs_info:*:*' stagedstr '%F{green} ✚%f'
 
 
-source <(cat ~/.sh.d/*)
 source <(cat ~/.zsh.d/*)
+source <(cat ~/.sh.d/*)
 
 # Source private files that may contain credentials or sensitive info
 if [ -d .private.d ]; then
