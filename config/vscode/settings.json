@@ -1,0 +1,24 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code', 'Source Code Pro', monospace",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 100000,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "line-thin",
+    "workbench.colorTheme": "Hopscotch (TextMate Theme)",
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontLigatures": true,
+    "workbench.fontAliasing": "auto",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
+    "terraform.telemetry.enabled": false,
+    "workbench.settings.enableNaturalLanguageSearch": false
+}

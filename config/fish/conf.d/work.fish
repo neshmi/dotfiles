@@ -1,0 +1,1 @@
+set WORK_EDITOR "code --new-window"
