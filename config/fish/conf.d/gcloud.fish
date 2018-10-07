@@ -1,1 +1,1 @@
-set PATH $PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/
+set PATH $PATH $HOME/google-cloud-sdk/bin/
