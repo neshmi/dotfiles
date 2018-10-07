@@ -11,7 +11,7 @@
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
     "editor.cursorStyle": "line-thin",
-    "workbench.colorTheme": "Hopscotch (TextMate Theme)",
+    "workbench.colorTheme": "Flat UI (+GUI)",
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
@@ -20,5 +20,6 @@
     "telemetry.enableTelemetry": false,
     "gitlens.advanced.telemetry.enabled": false,
     "terraform.telemetry.enabled": false,
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "csharp.format.enable": false
 }
