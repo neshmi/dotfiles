@@ -11,7 +11,7 @@
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
     "editor.cursorStyle": "line-thin",
-    "workbench.colorTheme": "Flat UI (+GUI)",
+    "workbench.colorTheme": "Flat UI",
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
