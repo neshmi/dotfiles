@@ -3,7 +3,7 @@
         "suppressShowKeyBindingsNotice": true
     },
     "editor.fontSize": 16,
-    "editor.fontFamily": "'Fira Code', 'Source Code Pro', monospace",
+    "editor.fontFamily": "'Mononoki Nerd Font', 'Source Code Pro', monospace",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.scrollback": 100000,
     "files.trimFinalNewlines": true,
@@ -21,5 +21,6 @@
     "gitlens.advanced.telemetry.enabled": false,
     "terraform.telemetry.enabled": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "csharp.format.enable": false
+    "csharp.format.enable": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
