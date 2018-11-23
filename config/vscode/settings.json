@@ -11,7 +11,7 @@
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
     "editor.cursorStyle": "line-thin",
-    "workbench.colorTheme": "Flat UI",
+    "workbench.colorTheme": "Ayu Mojave",
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "editor.fontLigatures": true,
@@ -22,5 +22,10 @@
     "terraform.telemetry.enabled": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "csharp.format.enable": false,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "files.associations": {
+        ".docker-compose-env": "dotenv"
+    },
+    "workbench.iconTheme": "vscode-great-icons"
 }
