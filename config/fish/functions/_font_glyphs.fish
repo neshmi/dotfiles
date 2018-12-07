@@ -28,4 +28,9 @@ function _font_glyphs -S -d 'Define glyphs used by my shell'
     set git_plus_glyph       \uF0DE # fa-sort-asc
     set git_minus_glyph      \uF0DD # fa-sort-desc
     set git_plus_minus_glyph \uF0DC # fa-sort
+
+    set ruby_glyph           \uf43b # nf_oct_ruby
+    set git_glyph            \ue702 # nf-dev-git
+    set timer_glyph          \ufa1a # nf-mdi-timer
+    set double_arrow_glyph   \uf101 # nf-fa-angle_double_right
   end

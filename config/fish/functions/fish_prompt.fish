@@ -7,30 +7,14 @@ function __fish_prompt_duration
   set --local last (string split " " (echo $history[1]))
 
   set_color 777
-  echo -n "  $last[1] took ~"
+  echo -n " $timer_glyph $last[1] took ~"
   echo $duration
   set_color normal
 end
 
-function __default_fish_prompt --description "Write out the prompt"
-    set -l color_cwd
-    set -l suffix
-    switch "$USER"
-        case root toor
-            if set -q fish_color_cwd_root
-                set color_cwd $fish_color_cwd_root
-            else
-                set color_cwd $fish_color_cwd
-            end
-            set suffix '#'
-        case '*'
-            set color_cwd $fish_color_cwd
-            set suffix '>'
-    end
-
-    echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd) (set_color normal) "$suffix "
+function _rbenv_version
+  echo -s -n $red $ruby_glyph" "$cyan (rbenv version | awk '{print $1}')" "$normal
 end
-
 
 
 set normal (set_color normal)
@@ -39,6 +23,8 @@ set yellow (set_color yellow)
 set green (set_color green)
 set red (set_color red)
 set gray (set_color -o black)
+set cyan (set_color -o cyan)
+set blue (set_color -o blue)
 
 # Fish git prompt
 set __fish_git_prompt_shorten_branch_len 10
@@ -49,6 +35,7 @@ set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 set __fish_git_prompt_color_dirtystate red
 set __fish_git_prompt_describe_style branch
+set __fish_git_prompt_showstashstate 'yes'
 
 # Status Chars
 _font_glyphs
@@ -63,5 +50,6 @@ function fish_prompt --description "Write out the prompt"
   if test $CMD_DURATION -gt 1000
     echo (__fish_prompt_duration)
   end
-  echo -n -s "$USER" @ (prompt_hostname) (prompt_pwd) (set_color normal) (__fish_git_prompt) "> "
+  set -l arrow "$red$double_arrow_glyph $normal"
+  echo -n -s (_rbenv_version) (__fish_git_prompt " $git_glyph %s ") (prompt_pwd) (set_color normal)  \n $arrow " "
 end
