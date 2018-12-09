@@ -16,6 +16,9 @@ function _rbenv_version
   echo -s -n $red $ruby_glyph" "$cyan (rbenv version | awk '{print $1}')" "$normal
 end
 
+function _kctx
+  echo -s -n $blue $k8s_glyph" "(kubectl config current-context)\|(kubectl config view | grep namespace:|awk '{print $2}')" "$normal
+end
 
 set normal (set_color normal)
 set magenta (set_color magenta)
@@ -51,5 +54,5 @@ function fish_prompt --description "Write out the prompt"
     echo (__fish_prompt_duration)
   end
   set -l arrow "$red$double_arrow_glyph $normal"
-  echo -n -s (_rbenv_version) (__fish_git_prompt "$git_glyph %s ") (prompt_pwd) (set_color normal)  \n $arrow " "
+  echo -n -s (_rbenv_version) (_kctx) (__fish_git_prompt "$git_glyph %s ") (prompt_pwd) (set_color normal)  \n $arrow " "
 end
