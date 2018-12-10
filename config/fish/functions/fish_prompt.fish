@@ -13,7 +13,7 @@ function __fish_prompt_duration
 end
 
 function _rbenv_version
-  echo -s -n $red $ruby_glyph" "$cyan (rbenv version | awk '{print $1}')" "$normal
+  echo -s -n $red $ruby_glyph" " (rbenv version | awk '{print $1}')" "$normal
 end
 
 function _kctx
@@ -54,5 +54,5 @@ function fish_prompt --description "Write out the prompt"
     echo (__fish_prompt_duration)
   end
   set -l arrow "$red$double_arrow_glyph $normal"
-  echo -n -s (_rbenv_version) (_kctx) (__fish_git_prompt "$git_glyph %s ") (prompt_pwd) (set_color normal)  \n $arrow " "
+  echo -n -s (_rbenv_version) (__fish_git_prompt "$yellow$git_glyph %s ") $cyan(prompt_pwd) $normal  \n $arrow " "
 end
