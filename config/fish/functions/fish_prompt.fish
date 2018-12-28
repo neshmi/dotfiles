@@ -7,17 +7,23 @@ function __fish_prompt_duration
   set --local last (string split " " (echo $history[1]))
 
   set_color 777
-  echo -n " $timer_glyph $last[1] took ~"
+  echo -n "$timer_glyph $last[1] took ~"
   echo $duration
   set_color normal
 end
 
 function _rbenv_version
-  echo -s -n $red $ruby_glyph" " (rbenv version | awk '{print $1}')" "$normal
+  if test -e .ruby-version
+    if type -q rbenv
+      echo -s -n $red $ruby_glyph" " (rbenv version | awk '{print $1}')" "$normal
+    end
+  end
 end
 
 function _kctx
-  echo -s -n $blue $k8s_glyph" "(kubectl config current-context)\|(kubectl config view | grep namespace:|awk '{print $2}')" "$normal
+  if type -q kubectl
+    echo -s -n $blue $k8s_glyph" "(kubectl config current-context)\|(kubectl config view | grep namespace:|awk '{print $2}')" "$normal
+  end
 end
 
 set normal (set_color normal)
@@ -53,6 +59,7 @@ function fish_prompt --description "Write out the prompt"
   if test $CMD_DURATION -gt 1000
     echo (__fish_prompt_duration)
   end
+
   set -l arrow "$red$double_arrow_glyph $normal"
-  echo -n -s (_rbenv_version) (__fish_git_prompt "$yellow$git_glyph %s ") $cyan(prompt_pwd) $normal  \n $arrow " "
+  echo -n -s (_rbenv_version) (__fish_git_prompt "$yellow$git_glyph %s ") $cyan(prompt_pwd) $normal  \n $arrow ""
 end
