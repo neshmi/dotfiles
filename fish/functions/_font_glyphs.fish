@@ -32,6 +32,6 @@ function _font_glyphs -S -d 'Define glyphs used by my shell'
     set ruby_glyph           \uf43b # nf_oct_ruby
     set git_glyph            \ue702 # nf-dev-git
     set timer_glyph          \ufa1a # nf-mdi-timer
-    set double_arrow_glyph   \uf101 # nf-fa-angle_double_right
+    set double_arrow_glyph   \u00BB # nf-fa-angle_double_right
     set k8s_glyph            \ufd31 # nf-mdi-ship-wheel
   end
