@@ -20,6 +20,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+.vscode
+.DS\_Store
 .svn
 *.sqlite3
 XX106-5TY6
@@ -27,3 +29,5 @@ XX106-5TY6
 /.tags
 /.tags_sorted_by_file
 /*.sublime*
+/.sync
+/node_modules
