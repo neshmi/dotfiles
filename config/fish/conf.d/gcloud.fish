@@ -1,1 +1,0 @@
-set PATH $PATH $HOME/google-cloud-sdk/bin/

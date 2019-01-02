@@ -1,5 +1,6 @@
 set fish_greeting # turn off greeting
 functions -e open # turn off Fish's open command, it's not necessary on OS X
+abbr --add ls 'ls -alFh'
 
 set PATH $PATH /usr/local/sbin
 

@@ -8,12 +8,13 @@ if test ! $(which brew); then
 fi
 
 brew tap Homebrew/bundle
-brew bundle --no-upgrade --force
+brew bundle --force
 
 mkdir -p ~/.config/fish
-ln -nFs ~/.dotfiles/config/fish/config.fish $HOME/.config/fish/config.fish
-ln -nFs ~/.dotfiles/config/fish/conf.d $HOME/.config/fish/conf.d
-ln -nFs ~/.dotfiles/config/fish/functions $HOME/.config/fish/functions
+ln -nFs ~/.dotfiles/fish/config.fish $HOME/.config/fish/config.fish
+ln -nFs ~/.dotfiles/fish/conf.d      $HOME/.config/fish/conf.d
+ln -nFs ~/.dotfiles/fish/functions   $HOME/.config/fish/functions
+ln -nFs ~/.dotfiles/fish/completions   $HOME/.config/fish/completions
 
 shell="/usr/local/bin/fish"
 
