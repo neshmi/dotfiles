@@ -1,6 +1,6 @@
 if dotfiles-is-installing
   echo "💎 Setting up rbenv"
-  set rubyVersion "2.6.0"
+  set rubyVersion "2.6.1"
 
   mkdir -p ~/.rbenv
   echo "bundler" > ~/.rbenv/default-gems

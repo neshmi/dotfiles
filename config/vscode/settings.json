@@ -21,11 +21,11 @@
     "gitlens.advanced.telemetry.enabled": false,
     "terraform.telemetry.enabled": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "csharp.format.enable": false,
     "workbench.startupEditor": "newUntitledFile",
     "window.zoomLevel": 0,
     "files.associations": {
         ".docker-compose-env": "dotenv"
     },
-    "workbench.iconTheme": "vscode-great-icons"
+    "workbench.iconTheme": "vscode-great-icons",
+    "githubPullRequests.telemetry.enabled": false
 }

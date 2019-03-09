@@ -5,4 +5,9 @@ function switch_key
   end
 end
 
+function reset_gpg
+   gpg-connect-agent reloadagent /bye > /dev/null 2>&1
+   gpg --card-status > /dev/null 2>&1
+end
+
 set --export SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
