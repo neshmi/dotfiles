@@ -11,3 +11,5 @@ if dotfiles-is-installing
     echo "🔧 Rust already installed"
   end
 end
+
+source ~/.cargo/env

@@ -22,8 +22,8 @@ function _font_glyphs -S -d 'Define glyphs used by my shell'
     set git_staged_glyph     \uF0C7 '' # nf-fa-save
     set git_stashed_glyph    \uF0C6 '' # nf-fa-paperclip
     set git_untracked_glyph  \uF128 '' # nf-fa-question
-    set git_ahead_glyph      \uF47B # nf-oct-chevron_up
-    set git_behind_glyph     \uF47C # nf-oct-chevron_down
+    set git_ahead_glyph      '⇡'
+    set git_behind_glyph     '⇣'
 
     set git_plus_glyph       \uF0DE # fa-sort-asc
     set git_minus_glyph      \uF0DD # fa-sort-desc
@@ -31,7 +31,7 @@ function _font_glyphs -S -d 'Define glyphs used by my shell'
 
     set ruby_glyph           \uf43b # nf_oct_ruby
     set git_glyph            \ue702 # nf-dev-git
-    set timer_glyph          \ufa1a # nf-mdi-timer
+    set timer_glyph          \u25F7 # fake timer
     set double_arrow_glyph   \u00BB # nf-fa-angle_double_right
     set k8s_glyph            \ufd31 # nf-mdi-ship-wheel
   end

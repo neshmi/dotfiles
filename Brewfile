@@ -9,11 +9,23 @@ cask_args appdir: "/Applications"
 # FISH!
 brew "fish"
 
+# Core utils
+brew "git"
+brew "gnupg"
+brew "pinentry-mac"
+brew "awscli"
+brew "jq"
+brew "curl"
+brew "wget"
+brew "httpie"
+brew "readline"
+
 # Work stuff
 brew "37"
 brew "work"
-brew "mysql"
-brew "postgresql"
+brew "mysql", restart_service: :changed
+brew "postgresql", restart_service: :changed
+brew "redis", restart_service: :changed
 
 # Language stuff
 brew "rbenv"
@@ -27,25 +39,13 @@ brew "python"
 brew "node"
 brew "yarn"
 
-
-# Core utils
-brew "git"
-brew "gnupg"
-brew "pinentry-mac"
-brew "awscli"
-brew "jq"
-brew "curl"
-brew "wget"
-brew "httpie"
-brew "readline"
-
 # Shell utilities
 brew "prettyping"
 brew "bat"
 brew "diff-so-fancy"
 brew "hub"
 brew "jsonpp"
-brew "the_silver_searcher"
+brew "ripgrep"
 brew "tldr"
 brew "tree"
 
@@ -75,6 +75,8 @@ cask "google-cloud-sdk"
 cask "signal"
 cask "steam"
 cask "gog-galaxy"
+cask "yacreader"
+cask "xld"
 
 # Fonts
 tap "homebrew/cask-fonts"

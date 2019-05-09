@@ -6,4 +6,5 @@ if status --is-interactive
     alias kgp="kubectl get pods"
     alias kctx="kubectx"
     alias kns="kubens"
+    alias kge="kubectl get events --sort-by='.lastTimestamp'"
 end

@@ -47,3 +47,5 @@
 	smudge = git-lfs smudge -- %f
 [tag]
 	gpgsign = true
+[credential]
+	helper = osxkeychain

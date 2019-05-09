@@ -60,6 +60,6 @@ function fish_prompt --description "Write out the prompt"
     echo (__fish_prompt_duration)
   end
 
-  set -l arrow "$red$double_arrow_glyph $normal"
+  set -l arrow "$blue$double_arrow_glyph $normal"
   echo -n -s (_rbenv_version) (__fish_git_prompt "$yellow$git_glyph %s ") $cyan(prompt_pwd) $normal  \n $arrow ""
 end
