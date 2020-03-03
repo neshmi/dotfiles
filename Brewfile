@@ -74,7 +74,6 @@ cask "github"
 cask "google-cloud-sdk"
 cask "signal"
 cask "steam"
-cask "gog-galaxy"
 cask "yacreader"
 cask "xld"
 
