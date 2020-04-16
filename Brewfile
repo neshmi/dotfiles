@@ -76,6 +76,11 @@ cask "signal"
 cask "steam"
 cask "yacreader"
 cask "xld"
+cask "iterm2"
+cask "steam"
+cask "google-chrome"
+cask "zoom"
+cask "whatsapp"
 
 # Fonts
 tap "homebrew/cask-fonts"

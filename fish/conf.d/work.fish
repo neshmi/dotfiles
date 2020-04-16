@@ -6,5 +6,6 @@ abbr --add hr work cd highrisehq/server
 abbr --add dot cd ~/.dotfiles
 abbr --add qb work cd basecamp/queenbee
 abbr --add be bundle exec
+abbr --add wcd work cd 
 
 work update --if-needed

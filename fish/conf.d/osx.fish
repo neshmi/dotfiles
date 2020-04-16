@@ -1,6 +1,6 @@
 if dotfiles-is-installing;
   echo " Setting up macOS defaults"
-  set name "valinor"
+  set name "MattBook Pro"
 
   # Ask for the administrator password upfront
   sudo -v
