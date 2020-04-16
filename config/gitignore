@@ -31,3 +31,4 @@ XX106-5TY6
 /*.sublime*
 /.sync
 /node_modules
+.envrc

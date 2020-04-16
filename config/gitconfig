@@ -1,9 +1,9 @@
 [user]
-	name = Nathan Anderson
-	email = andnat@gmail.com
-	signingkey = 0xAB2E8BA30A3CD935
+	name = Matthew Vincent
+	email = mvincent@basecamp.com
+	signingkey = F17942C97D5E8E54
 [core]
-	excludesfile = /Users/nathan/.gitignore
+	excludesfile = /Users/neshmi/.gitignore
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [alias]
