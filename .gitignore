@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ruby/.bundle/cache
 fish/.config/fish/fish_variables
+=======
+personal
+secrets
+>>>>>>> 49e3e22 (adding gitignore)
