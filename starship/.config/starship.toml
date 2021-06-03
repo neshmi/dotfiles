@@ -70,8 +70,7 @@ error_symbol = "[»](bold red)"
 disabled = true
 
 [cmd_duration]
-show_milliseconds = true
-format = "◷[$duration]($style) \n"
+format = "◷ [$duration]($style) \n"
 
 [directory]
 truncation_length = 2
