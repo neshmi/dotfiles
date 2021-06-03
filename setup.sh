@@ -93,13 +93,10 @@ parse_params() {
 parse_params "$@"
 setup_colors
 
-# script logic here
-
-
-
 for dir in ./*/; do
   realdir=$(realpath "$dir")
   package=$(basename "$dir")
+
   if [ "$cleanup" != "" ]; then
     msg "Cleaning up ${CYAN}$package${NOCOLOR}"
     stow $force $cleanup -t ~ $verbose $package
