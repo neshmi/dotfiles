@@ -13,3 +13,6 @@ if test -e $HOME/.private.config.fish
 end
 
 starship init fish | source
+
+# Handle ssh-agent
+fish_ssh_agent

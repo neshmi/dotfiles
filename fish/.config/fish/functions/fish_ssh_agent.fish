@@ -8,7 +8,6 @@ function __ssh_agent_is_started -d "check if ssh agent is already started"
    end
 
    ps -ef | grep $SSH_AGENT_PID | grep -v grep | grep -q ssh-agent
-   #pgrep ssh-agent
    return $status
 end
 
@@ -17,7 +16,11 @@ function __ssh_agent_start -d "start a new ssh agent"
    ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
    chmod 600 $SSH_ENV
    source $SSH_ENV > /dev/null
-   ssh-add -AK > /dev/null 2>&1 # Ensure we add keys when we start an agent
+   if is_mac
+      ssh-add -AK -q > /dev/null 2>&1 # Ensure we add keys when we start an agent
+   else
+      ssh-add -q
+   end
    true  # suppress errors from setenv, i.e. set -gx
 end
 
