@@ -17,6 +17,7 @@ Available options:
 -h, --help      Print this help and exit
 -v, --verbose   Print script debug info
 -f, --force     Force installation
+-c, --cleanup   Uninstall/Cleanup dotfiles
 EOF
   exit
 }
@@ -50,7 +51,6 @@ parse_params() {
   force=""
   verbose=""
   cleanup=""
-  param=''
   target="$HOME"
 
   while :; do
@@ -80,12 +80,6 @@ parse_params() {
     esac
     shift
   done
-
-  #args=("$@")
-
-  # check required params and arguments
-  #[[ -z "${param-}" ]] && die "Missing required parameter: param"
-  #[[ ${#args[@]} -eq 0 ]] && die "Missing script arguments"
 
   return 0
 }
