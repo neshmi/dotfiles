@@ -1,3 +1,5 @@
 function flush_dns
-  sudo killall -HUP mDNSResponder
+  if is_mac
+    sudo killall -HUP mDNSResponder
+  end
 end
