@@ -1,6 +1,67 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+format = """
+$cmd_duration\
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
 [character]
 success_symbol = "[»](bold green)"
 error_symbol = "[»](bold red)"
@@ -10,6 +71,7 @@ disabled = true
 
 [cmd_duration]
 show_milliseconds = true
+format = "🕐[$duration]($style) \n"
 
 [directory]
 truncation_length = 2
@@ -21,12 +83,12 @@ symbol = ""
 truncation_length = 28
 
 [hostname]
-ssh_only = false
+ssh_only = true
 format = "[$hostname]($style) "
 
 [username]
 format = "[$user]($style)@"
-show_always = true
+show_always = false
 
 [kubernetes]
 disabled = false
