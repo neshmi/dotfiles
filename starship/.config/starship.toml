@@ -71,7 +71,7 @@ disabled = true
 
 [cmd_duration]
 show_milliseconds = true
-format = "🕐[$duration]($style) \n"
+format = "◷[$duration]($style) \n"
 
 [directory]
 truncation_length = 2
@@ -79,8 +79,17 @@ fish_style_pwd_dir_length = 1
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = ""
+symbol = ""
 truncation_length = 28
+
+[git_status]
+conflicted = '[!$count](red)'
+untracked = '[?$count](cyan)‍'
+modified = '[*$count](red)'
+staged = '[+$count](green)'
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
 [hostname]
 ssh_only = true
