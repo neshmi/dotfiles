@@ -1,0 +1,32 @@
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[character]
+success_symbol = "[»](bold green)"
+error_symbol = "[»](bold red)"
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[cmd_duration]
+show_milliseconds = true
+
+[directory]
+truncation_length = 2
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = ""
+truncation_length = 28
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+
+[username]
+format = "[$user]($style)@"
+show_always = true
+
+[kubernetes]
+disabled = false
