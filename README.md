@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal dotfiles for anoldguy.
+Personal dotfiles for anoldguy. Requires `stow` to manage installation of dotfiles, and has lots of [`fish`](https://fishshell.com/)-specific stuff. The prompt is all [`starship`](https://starship.rs) tho!
 
 ## Installation
 
@@ -19,3 +19,7 @@ Personal dotfiles for anoldguy.
 ```bash
 ./setup.sh -h
 ```
+
+## Terminal Themes
+
+I've included a couple of my fav terminal themes. Flat has been my default for years, but both the Elementary and Dimmed Monokai look promising.
