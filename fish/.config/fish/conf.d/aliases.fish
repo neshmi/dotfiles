@@ -10,5 +10,5 @@ if status --is-interactive
     abbr -a kns kubens
     abbr -a kget kubectl get events --sort-by='.lastTimestamp'
     abbr -a kc kubectl config current-context
-    alias kde="kubectl get pods | grep Evicted | awk '{print $1}'|xargs -n 1 kubectl delete pod"
+    abbr -a kde "kubectl get pods | grep Evicted | awk '{print $1}' | xargs -n 1 kubectl delete pod"
 end
