@@ -8,7 +8,7 @@ trap cleanup SIGINT SIGTERM ERR EXIT
 
 usage() {
   cat <<EOF
-Usage: $(basename "$0") [-h] [-v] [-f] 
+Usage: $(basename "$0") [-h] [-v] [-f]
 
 Install prerequisites and configure dotfiles
 
@@ -84,11 +84,15 @@ parse_params() {
   return 0
 }
 
+check_dependencies(){
+ which stow > /dev/null || (echo "GNU Stow required; install via brew or apt"; exit)
+}
+
+check_dependencies
 parse_params "$@"
 setup_colors
 
 for dir in ./*/; do
-  realdir=$(realpath "$dir")
   package=$(basename "$dir")
 
   if [ "$cleanup" != "" ]; then
