@@ -23,3 +23,7 @@ Personal dotfiles for anoldguy. Requires `stow` to manage installation of dotfil
 ## Terminal Themes
 
 I've included a couple of my fav terminal themes. Flat has been my default for years, but both the Elementary and Dimmed Monokai look promising.
+
+![Flat Terminal Preview](flat-terminal-preview.png)
+![Elementary Terminal Preview](elementary-terminal-preview.png)
+![Dimmed Monokai Terminal Preview](dimmed-monokai-terminal-preview.png)
