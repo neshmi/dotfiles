@@ -1,8 +1,8 @@
 if status --is-interactive
-    alias ping="prettyping --nolegend"
-    alias top="htop"
     abbr --add bi bundle install
     abbr --add be bundle exec
+    which prettyping > /dev/null && alias ping="prettyping --nolegend"
+    which htop > /dev/null && alias top="htop"
     abbr -a k kubectl
     abbr -a kg kubectl get
     abbr -a kgp kubectl get pods
