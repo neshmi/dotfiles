@@ -5,13 +5,14 @@ format = """
 $cmd_duration\
 $username\
 $hostname\
+$directory\
 $shlvl\
 $kubernetes\
 $vcsh\
+$git_status\
 $git_branch\
 $git_commit\
 $git_state\
-$git_status\
 $hg_branch\
 $docker_context\
 $package\
@@ -52,7 +53,6 @@ $openstack\
 $env_var\
 $crystal\
 $custom\
-$directory\
 $line_break\
 $lua\
 $jobs\
@@ -77,12 +77,12 @@ truncation_length = 2
 fish_style_pwd_dir_length = 1
 
 [git_branch]
-format = "[$symbol$branch]($style)"
+format = "[$symbol$branch]($style) "
 symbol = ""
 truncation_length = 28
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[$all_status$ahead_behind\]]($style))'
 conflicted = '[!$count](red)'
 untracked = '[?$count](cyan)'
 modified = '[*$count](red)'
@@ -93,6 +93,10 @@ behind = '⇣${count}'
 
 [ruby]
 format = 'rb[$symbol($version )]($style) '
+symbol = ""
+
+[nodejs]
+format = 'js[$symbol($version )]($style) '
 symbol = ""
 
 [hostname]
