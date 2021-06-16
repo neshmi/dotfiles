@@ -92,11 +92,11 @@ diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 
 [ruby]
-format = 'rb[$symbol($version )]($style) '
+format = 'rb:[$symbol($version )]($style) '
 symbol = ""
 
 [nodejs]
-format = 'js[$symbol($version )]($style) '
+format = 'js:[$symbol($version )]($style) '
 symbol = ""
 
 [hostname]
@@ -116,3 +116,7 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[golang]
+format = 'go:[$symbol($version )]($style) '
+symbol = ""
