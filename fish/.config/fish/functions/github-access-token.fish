@@ -2,7 +2,8 @@ function github-access-token
   if is_linux
     echo "not-set"
   else
-    printf "host=github.com\nprotocol=https\n\n" | git credential-osxkeychain get | grep password= | string replace "password=" ""
+    # Maybe someday, the 1Password CLI won't suck, and
+    # I can pull this out of one spot.
+    security find-internet-password -s github.com -w
   end
 end
-
