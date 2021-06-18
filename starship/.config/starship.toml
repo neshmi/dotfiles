@@ -120,3 +120,7 @@ disabled = true
 [golang]
 format = 'go:[$symbol($version )]($style) '
 symbol = ""
+
+[rust]
+format = 'rs:[$symbol($version )]($style) '
+symbol = ""
